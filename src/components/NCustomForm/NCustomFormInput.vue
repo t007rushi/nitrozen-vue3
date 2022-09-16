@@ -210,6 +210,7 @@ export default {
     formInputValue() {
       this.inputChanged();
     },
+    deep: true
   },
   methods: {
     validateInput,
@@ -274,7 +275,8 @@ export default {
     margin: -8px -12px -4px -12px;
     z-index: 1;
     cursor: pointer;
-    ::v-deep svg {
+    
+    :deep(svg){
       height: 24px;
     }
   }
@@ -287,15 +289,15 @@ export default {
       -webkit-box-shadow: none !important;
       box-shadow: none !important;
     }
-    /deep/.dropdown-arrow {
+    :deep(.dropdown-arrow ){
       color: @SecondaryColor;
       margin-left: 3px;
     }
-    /deep/.country-code {
+    :deep(.country-code ){
       color: @TypographyPrimaryColor;
       font-size: @BaseFontSize + 2;
     }
-    /deep/input {
+    :deep(input) {
       color: @TypographyPrimaryColor;
       font-size: @BaseFontSize + 2;
     }

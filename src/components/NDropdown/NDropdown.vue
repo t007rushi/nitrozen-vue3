@@ -266,7 +266,8 @@ export default {
     items: {
       handler: function() {
         this.setAllOptions()
-      }
+      },
+      deep: true 
     }
   },
   computed: {
