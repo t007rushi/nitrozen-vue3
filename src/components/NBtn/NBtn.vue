@@ -2,6 +2,7 @@
 import NButtonContent from './NBtnContent';
 import strokeBtn from './../../directives/NStrokeBtn.js'
 import flatBtn from './../../directives/NFlatBtn.js'
+import { h } from 'vue'
 
 export default {
     name: 'nitrozen-button',
@@ -47,8 +48,8 @@ export default {
             type: String
         }
     },
-    render(createElement) {
-        const slotElement = createElement('n-button-content', {
+    render() {
+        const slotElement = h('n-button-content', {
             props: {
                 showProgress: this.showProgress,
                 icon: this.icon
@@ -70,9 +71,9 @@ export default {
                 disabled: this.disabled,
                 type: !this.href && (this.type || 'button')
             },
-            on: {
-                ...this.$listeners,
-            }
+            // on: {
+            //     ...this.$listeners,
+            // }
         }
         let tag = 'button';
         if (this.href) {
@@ -80,8 +81,8 @@ export default {
             buttonAttrs
         }
         // const slotElement = this.content;
-        // const slotElement = createElement('slot');
-        return createElement(tag, buttonAttrs, [slotElement])
+        // const slotElement = h('slot');
+        return h(tag, buttonAttrs, [slotElement])
     }
 }
 </script>
