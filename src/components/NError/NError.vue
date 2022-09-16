@@ -2,6 +2,7 @@
 <div class="nitrozen-error-visible">
     <slot />    
 </div>
+<div></div>
 </template>
 
 <script>
