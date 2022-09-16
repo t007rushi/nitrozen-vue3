@@ -1,6 +1,8 @@
-import Vue from 'vue';
+import {createApp} from 'vue';
+import App from "../pages/demo.vue"
+const app = createApp(App);
 
-const strokeBtn = Vue.directive('stroke-btn', {
+const strokeBtn = app.directive('stroke-btn', {
   bind: function (el, binding, vnode) {
     el.classList.add('n-button-stroke');
     if(vnode.componentOptions.propsData.theme == 'secondary') {
@@ -12,7 +14,7 @@ const strokeBtn = Vue.directive('stroke-btn', {
 
   }
 })
-Vue.use(strokeBtn);
+app.use(strokeBtn);
 
 // bind
 // inserted

@@ -1,6 +1,8 @@
-import Vue from 'vue';
+import {createApp} from 'vue';
+import App from "../pages/demo.vue"
+const app = createApp(App);
 
-const clickOutside = Vue.directive('click-outside', {
+const clickOutside = app.directive('click-outside', {
     bind: function (el, binding, vNode) {
         // Provided expression must evaluate to a function.
         if (typeof binding.value !== 'function') {
@@ -33,6 +35,6 @@ const clickOutside = Vue.directive('click-outside', {
     }
 });
 
-Vue.use(clickOutside);
+app.use(clickOutside);
 
 export default clickOutside;
