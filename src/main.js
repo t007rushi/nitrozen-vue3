@@ -1,14 +1,9 @@
-import Vue from 'vue'
-
+import {createApp} from 'vue'
 // import App from './pages/custom-form-demo.vue'
 import App from './pages/demo.vue'
+// import NitrozenVuePlugin from './setup';
 
-import NitrozenVuePlugin from './setup';
-
-Vue.use(NitrozenVuePlugin);
-
-Vue.config.productionTip = false
-
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+const app = createApp(App);
+// app.config.compilerOptions.isCustomElement = (tag) => tag.includes('nitrozen-')
+// app.use(NitrozenVuePlugin);
+app.mount('#app')

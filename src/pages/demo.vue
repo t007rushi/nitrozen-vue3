@@ -5,7 +5,7 @@
         <div>Searchable Dropdown</div>
         <nitrozen-dropdown
           label="Data"
-          :disabled="false"
+          :disabled=null
           id="searchable-dropdown-1"
           tooltip="This is a searchable dropdown"
           :items="dropdownItemsFiltered"
@@ -19,7 +19,7 @@
         <div>Custom Dropdown</div>
         <nitrozen-dropdown
           label="Data"
-          :disabled="false"
+          :disabled=null
           id="searchable-dropdown-1"
           tooltip="This is a searchable dropdown"
           :items="dropdownItemsFiltered"
@@ -78,7 +78,7 @@
           @stepperClicked="stepperClicked"
         ></nitrozen-stepper>
         <div class="stepper-btn-container">
-          <nitrozen-button v-flat-btn @click="stepperNext"
+          <nitrozen-button  @click="stepperNext"
             >Next</nitrozen-button
           >
         </div>
@@ -94,142 +94,142 @@
 
       <!-- Flat Button -->
       <div class="main-div space-between">
-        <nitrozen-button v-flat-btn @click="someFunc"
+        <nitrozen-button  @click="someFunc"
           >Primary Flat {{ numberOfClick }}</nitrozen-button
         >
         <div class="hover-new">
-          <nitrozen-button v-flat-btn>Hover Flat</nitrozen-button>
+          <nitrozen-button >Hover Flat</nitrozen-button>
         </div>
-        <nitrozen-button v-flat-btn :showProgress="true"></nitrozen-button>
-        <nitrozen-button v-flat-btn :focused="true"
+        <nitrozen-button  :showProgress="true"></nitrozen-button>
+        <nitrozen-button  :focused="true"
           >Focused Flat</nitrozen-button
         >
-        <nitrozen-button v-flat-btn :disabled="true"
+        <nitrozen-button  :disabled="true"
           >Disabled Flat</nitrozen-button
         >
       </div>
 
       <!-- Flat Stroke Button -->
       <div class="main-div space-between">
-        <nitrozen-button v-stroke-btn>Primary Stroke</nitrozen-button>
+        <nitrozen-button >Primary Stroke</nitrozen-button>
         <div class="hover-new">
-          <nitrozen-button v-stroke-btn>Hover Stroke</nitrozen-button>
+          <nitrozen-button >Hover Stroke</nitrozen-button>
         </div>
-        <nitrozen-button v-stroke-btn :focused="true"
+        <nitrozen-button  :focused="true"
           >Focused Stroke</nitrozen-button
         >
-        <nitrozen-button v-stroke-btn :disabled="true"
+        <nitrozen-button  :disabled="true"
           >Disabled Stroke</nitrozen-button
         >
       </div>
 
       <!-- Rounded Button -->
       <div class="main-div space-between">
-        <nitrozen-button v-flat-btn :rounded="true">Rounded</nitrozen-button>
+        <nitrozen-button  :rounded="true">Rounded</nitrozen-button>
         <div class="hover-new">
-          <nitrozen-button v-flat-btn :rounded="true">Hover</nitrozen-button>
+          <nitrozen-button  :rounded="true">Hover</nitrozen-button>
         </div>
         <nitrozen-button
-          v-flat-btn
+          
           :rounded="true"
           :showProgress="true"
         ></nitrozen-button>
-        <nitrozen-button v-flat-btn :rounded="true" :focused="true"
+        <nitrozen-button  :rounded="true" :focused="true"
           >Focused</nitrozen-button
         >
-        <nitrozen-button v-flat-btn :rounded="true" :disabled="true"
+        <nitrozen-button  :rounded="true" :disabled="true"
           >Disabled</nitrozen-button
         >
       </div>
 
       <!-- Rounded Stroke Button -->
       <div class="main-div space-between">
-        <nitrozen-button v-stroke-btn :rounded="true">Rounded</nitrozen-button>
+        <nitrozen-button  :rounded="true">Rounded</nitrozen-button>
         <div class="hover-new">
-          <nitrozen-button v-stroke-btn :rounded="true">Hover</nitrozen-button>
+          <nitrozen-button  :rounded="true">Hover</nitrozen-button>
         </div>
-        <nitrozen-button v-stroke-btn :rounded="true" :focused="true"
+        <nitrozen-button  :rounded="true" :focused="true"
           >Focused</nitrozen-button
         >
-        <nitrozen-button v-stroke-btn :rounded="true" :disabled="true"
+        <nitrozen-button  :rounded="true" :disabled="true"
           >Disabled</nitrozen-button
         >
       </div>
 
       <!-- Secondary Flat Button -->
       <div class="main-div space-between">
-        <nitrozen-button v-flat-btn :theme="'secondary'"
+        <nitrozen-button  :theme="'secondary'"
           >Primary Small Flat</nitrozen-button
         >
-        <nitrozen-button v-flat-btn :theme="'secondary'"
+        <nitrozen-button  :theme="'secondary'"
         size="medium"
           >Primary Medium Flat</nitrozen-button
         >
-        <nitrozen-button v-flat-btn :theme="'secondary'"
+        <nitrozen-button  :theme="'secondary'"
         size="large"
           >Primary Large Flat</nitrozen-button
         >
         <div class="hover-new">
-          <nitrozen-button v-flat-btn :theme="'secondary'"
+          <nitrozen-button  :theme="'secondary'"
             >Hover Flat</nitrozen-button
           >
         </div>
         <nitrozen-button
-          v-flat-btn
+          
           :showProgress="true"
           :theme="'secondary'"
         ></nitrozen-button>
-        <nitrozen-button v-flat-btn :focused="true" :theme="'secondary'"
+        <nitrozen-button  :focused="true" :theme="'secondary'"
           >Focused Flat</nitrozen-button
         >
-        <nitrozen-button v-flat-btn :disabled="true" :theme="'secondary'"
+        <nitrozen-button  :disabled="true" :theme="'secondary'"
           >Disabled Flat</nitrozen-button
         >
       </div>
 
       <!-- Secondary Stroke Button -->
       <div class="main-div space-between">
-        <nitrozen-button v-stroke-btn :theme="'secondary'"
+        <nitrozen-button  :theme="'secondary'"
           >Primary</nitrozen-button
         >
         <div class="hover-new">
-          <nitrozen-button v-stroke-btn :theme="'secondary'"
+          <nitrozen-button  :theme="'secondary'"
             >Hover</nitrozen-button
           >
         </div>
-        <nitrozen-button v-stroke-btn :focused="true" :theme="'secondary'"
+        <nitrozen-button  :focused="true" :theme="'secondary'"
           >Focused Stroke</nitrozen-button
         >
-        <nitrozen-button v-stroke-btn :disabled="true" :theme="'secondary'"
+        <nitrozen-button  :disabled="true" :theme="'secondary'"
           >Disabled</nitrozen-button
         >
       </div>
 
       <!-- Secondary Rounded Button -->
       <div class="main-div space-between">
-        <nitrozen-button v-flat-btn :theme="'secondary'" :rounded="true"
+        <nitrozen-button  :theme="'secondary'" :rounded="true"
           >Rounded</nitrozen-button
         >
         <div class="hover-new">
-          <nitrozen-button v-flat-btn :theme="'secondary'" :rounded="true"
+          <nitrozen-button  :theme="'secondary'" :rounded="true"
             >Hover</nitrozen-button
           >
         </div>
         <nitrozen-button
-          v-flat-btn
+          
           :showProgress="true"
           :theme="'secondary'"
           :rounded="true"
         ></nitrozen-button>
         <nitrozen-button
-          v-flat-btn
+          
           :focused="true"
           :rounded="true"
           :theme="'secondary'"
           >Disabled</nitrozen-button
         >
         <nitrozen-button
-          v-flat-btn
+          
           :disabled="true"
           :rounded="true"
           :theme="'secondary'"
@@ -239,23 +239,23 @@
 
       <!-- Secondary Rounded Stroke Button -->
       <div class="main-div space-between">
-        <nitrozen-button v-stroke-btn :rounded="true" :theme="'secondary'"
+        <nitrozen-button  :rounded="true" :theme="'secondary'"
           >Primary</nitrozen-button
         >
         <div class="hover-new">
-          <nitrozen-button v-stroke-btn :rounded="true" :theme="'secondary'"
+          <nitrozen-button  :rounded="true" :theme="'secondary'"
             >Hover</nitrozen-button
           >
         </div>
         <nitrozen-button
-          v-stroke-btn
+          
           :rounded="true"
           :focused="true"
           :theme="'secondary'"
           >Focused</nitrozen-button
         >
         <nitrozen-button
-          v-stroke-btn
+          
           :rounded="true"
           :disabled="true"
           :theme="'secondary'"
@@ -267,12 +267,12 @@
       <div class="main-div">
         <div class="grouping">
           <div class="width-50">
-            <nitrozen-button v-flat-btn>Save</nitrozen-button>
-            <nitrozen-button v-stroke-btn>Cancel</nitrozen-button>
+            <nitrozen-button >Save</nitrozen-button>
+            <nitrozen-button >Cancel</nitrozen-button>
           </div>
 
           <div class="width-50">
-            <nitrozen-button v-flat-btn>Save</nitrozen-button>
+            <nitrozen-button >Save</nitrozen-button>
             <nitrozen-button>Cancel</nitrozen-button>
           </div>
         </div>
@@ -280,10 +280,10 @@
 
       <!-- Large Button -->
       <div class="main-div space-between">
-        <nitrozen-button v-flat-btn :size="'large'"
+        <nitrozen-button  :size="'large'"
           >Large Button</nitrozen-button
         >
-        <nitrozen-button v-flat-btn :size="'large'" :theme="'secondary'"
+        <nitrozen-button  :size="'large'" :theme="'secondary'"
           >Large Button</nitrozen-button
         >
       </div>
@@ -297,16 +297,16 @@
         <nitrozen-button :href="'https://google.com'" :focused="true"
           >Focused</nitrozen-button
         >
-        <!-- <nitrozen-button v-flat-btn :large="true" :theme="'secondary'">Large Button</nitrozen-button>       -->
+        <!-- <nitrozen-button  :large="true" :theme="'secondary'">Large Button</nitrozen-button>       -->
       </div>
 
       <div class="main-div space-between">
-        <nitrozen-button v-flat-btn :icon="'facebook'" :theme="'secondary'"
+        <nitrozen-button  :icon="'facebook'" :theme="'secondary'"
           >Facebook</nitrozen-button
         >
         <nitrozen-button
           @click="autofocusSearch = !autofocusSearch"
-          v-flat-btn
+          
           :icon="'bag'"
           :theme="'secondary'"
           >Bag</nitrozen-button
@@ -443,7 +443,7 @@
           :id="11"
           :type="'text'"
           :showPrefix="true"
-          prefix="%"
+
           :placeholder="'Percentage'"
         ></nitrozen-input>
         <nitrozen-input
@@ -459,7 +459,6 @@
           :id="13"
           :type="'text'"
           :showPrefix="true"
-          prefix="$"
           :showSuffix="true"
           suffix=".00"
         ></nitrozen-input>
@@ -468,7 +467,6 @@
           :id="14"
           :type="'text'"
           :showPrefix="true"
-          prefix="https://example.com/users/"
           :placeholder="'Url'"
         ></nitrozen-input>
 
@@ -558,14 +556,14 @@
         {{ abcd }}
       </div>
 
-      <div class="main-div space-between">
+      <!-- <div class="main-div space-between">
         <nitrozen-autocomplete
           :id="'auto'"
           v-model="autoModel"
           :dataset="countries"
           :placeholder="'Start Type'"
         ></nitrozen-autocomplete>
-      </div>
+      </div> -->
 
       <div class="main-div space-between">
         <nitrozen-chips>Nitro Basic Chips</nitrozen-chips>
@@ -575,7 +573,7 @@
         <nitrozen-chips :disable="true">Disable Chips</nitrozen-chips>
       </div>
 
-      <div class="main-div space-between">
+      <!-- <div class="main-div space-between">
         <nitrozen-chips
           @click="$snackbar.global.showError('Error Snackbar')"
           :state="'error'"
@@ -596,7 +594,7 @@
           :state="'selected'"
           >Nitro Selected</nitrozen-chips
         >
-      </div>
+      </div> -->
 
       <div class="main-div">
         <span class="chips-input">
@@ -653,15 +651,16 @@
           label="Custom Dropdown"
           :items="dropdownItems"
           v-model="selectedDropdown"
-        >
-          <template v-slot:option="slotProps">
-            <div
+          >
+          <!-- v-slot:option="slotProps" -->
+          <!-- <template > -->
+            <!-- <div
               class="custom-dropdown-option"
               :class="{ selected: slotProps.selected }"
             >
               {{ slotProps.item }} {{ slotProps.selected }}
-            </div>
-          </template>
+            </div> -->
+          <!-- </template> -->
         </nitrozen-dropdown>
         <nitrozen-dropdown
           label="State"
@@ -727,16 +726,16 @@
       </div>
 
       <div class="main-div space-between">
-        <nitrozen-button v-flat-btn @click="openDialog('alert')"
+        <nitrozen-button  @click="openDialog('alert')"
           >Alert Dialog</nitrozen-button
         >
-        <nitrozen-button v-flat-btn @click="openDialog('confirm')"
+        <nitrozen-button  @click="openDialog('confirm')"
           >Confirmation Dialog</nitrozen-button
         >
-        <nitrozen-button v-flat-btn @click="openDialog"
+        <nitrozen-button  @click="openDialog"
           >Select Dialog</nitrozen-button
         >
-        <nitrozen-button v-flat-btn @click="openDialog('choose')"
+        <nitrozen-button  @click="openDialog('choose')"
           >Choose Dialog</nitrozen-button
         >
       </div>
@@ -745,24 +744,27 @@
         ref="alert_dialog"
         title="Success"
         @close="onCloseDialog"
-      >
-        <template v-slot:body name="body">Image Uploaded Successfully</template>
+        >
+        <!-- v-slot:body name="body" -->
+        <div >Image Uploaded Successfully</div>
       </nitrozen-dialog>
       <nitrozen-dialog
         ref="confirm_dialog"
         title="Confirm"
         @close="onCloseDialog"
-      >
-        <template v-slot:body name="body"
-          >Are you sure you want to delete this company?</template
+        >
+        <!-- v-slot:body name="body" -->
+        <div 
+          >Are you sure you want to delete this company?</div
         >
       </nitrozen-dialog>
       <nitrozen-dialog
         ref="choose_dialog"
         title="Choose Radio"
         @close="onCloseDialog"
-      >
-        <template v-slot:body name="body">
+        >
+        <!-- v-slot:body name="body" -->
+        <div >
           <nitrozen-radio
             :name="'radio-1'"
             v-model="radioModel"
@@ -799,7 +801,7 @@
             :radioValue="'5'"
             >Basic Radio 4</nitrozen-radio
           >
-        </template>
+        </div>
       </nitrozen-dialog>
     </div>
   </div>
@@ -807,8 +809,12 @@
 
 <script>
 import { countries } from "./countries";
+import { NitrozenBadge,NitrozenChips,NitrozenInput,NitrozenRadio,NitrozenToggleBtn,NitrozenButton,NitrozenMenu,NitrozenMenuItem,NitrozenTooltip,NitrozenTab,NitrozenTabItem,NitrozenInline,NitrozenError,NitrozenDropdown,NitrozenStepper } from "../components";
 export default {
   name: "App",
+  components:{
+    NitrozenBadge,NitrozenChips,NitrozenInput,NitrozenRadio,NitrozenToggleBtn,NitrozenButton,NitrozenMenu,NitrozenMenuItem,NitrozenTooltip,NitrozenTab,NitrozenTabItem,NitrozenInline,NitrozenError,NitrozenDropdown,NitrozenStepper
+  },
   data() {
     return {
       tabArray: ["Item1", "Item2", "Item3"],
