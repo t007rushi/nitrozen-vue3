@@ -1,6 +1,6 @@
 <template>
   <transition>
-    <li class="nitrozen-menu-item" v-on="$listeners">
+    <li class="nitrozen-menu-item" >
       <slot />
     </li>
   </transition>

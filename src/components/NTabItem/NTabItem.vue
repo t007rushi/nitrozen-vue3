@@ -1,5 +1,5 @@
 <template>
-  <li class="nitrozen-tab-item" v-on="$listeners">
+  <li class="nitrozen-tab-item" >
     <slot />
   </li>
 </template>
