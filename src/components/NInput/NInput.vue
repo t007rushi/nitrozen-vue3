@@ -59,7 +59,7 @@
         :placeholder="placeholder"
         :autocomplete="autocomplete"
         :id="id"
-        :ref="id"
+
         :disabled="disabled"
         :value="value"
         @input="valueChange"
@@ -78,7 +78,7 @@
         class="n-input input-text"
         :maxlength="maxlength"
         :disabled="disabled"
-        :ref="id"
+
         :placeholder="placeholder"
         :value="value"
         @input="valueChange"
